@@ -69,3 +69,59 @@ int majority2(const vector<int>& a)
     return majority;
 }
 
+unsigned int Translate(unsigned int input)
+{
+
+    int* c = new int[32];
+    unsigned int d = input;
+    unsigned int output = 0;
+    for (int j = 0; j < 32; j++)
+    {
+        int p = 31 - j;
+        if (d < (unsigned int)pow(2, p))
+        {
+            c[j] = 0;
+        }
+        else
+        {
+            c[j] = 1;
+            d = d - (unsigned int)pow(2, p);
+        }
+    }
+
+    for (int k = 0; k < 4; k++)
+    {
+        for (int l = 1; l < 9; l++)
+        {
+            int q = k * 8 + l - 1;
+            int r = 31 - q;
+            int s = 3 - k;
+            if (c[r] == 1)
+            {
+                output = output + (unsigned int)pow(2, (s * 8 + l - 1));
+            }
+        }
+    }
+    return output;
+}
+
+int SquareXorY(int* a)
+{
+    int out;
+    if (a[1] == a[0])
+    {
+        out = a[2];
+    }
+    else
+    {
+        if (a[2] == a[1])
+        {
+            out = a[0];
+        }
+        else
+        {
+            out = a[1];
+        }
+    }
+    return out;
+}

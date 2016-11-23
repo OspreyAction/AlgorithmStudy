@@ -5,3 +5,7 @@ bool IsEqual(double a, double b);
 
 int majority1(const vector<int>& a);
 int majority2(const vector<int>& a);
+
+unsigned int Translate(unsigned int);
+
+int SquareXorY(int*);

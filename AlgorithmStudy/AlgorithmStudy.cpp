@@ -5,12 +5,18 @@
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-    double a, b;
+    unsigned int a;
+    unsigned int b;
+    unsigned int c;
 
-    scanf("%lf %lf", &a, &b);
+    scanf("%u", &a);
 
-    printf("%d\n", IsEqual(a, b));
-
-	return 0;
+    for (int i = 0; i < a; i++)
+    {
+        scanf("%u", &b);
+        c = Translate(b);
+        printf("%u\n", c);
+    }
+    return 0;
 }
 
