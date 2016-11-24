@@ -9,3 +9,5 @@ int majority2(const vector<int>& a);
 unsigned int Translate(unsigned int);
 
 int SquareXorY(int*);
+
+char* Translate2(char*);

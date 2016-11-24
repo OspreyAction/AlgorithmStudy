@@ -9,5 +9,7 @@ using namespace std;
 #include <stdio.h>
 #include <tchar.h>
 
+#include <algorithm>
+
 #include "Functions1.h"
 #include "math.h"

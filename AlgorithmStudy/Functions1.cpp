@@ -125,3 +125,48 @@ int SquareXorY(int* a)
     }
     return out;
 }
+
+char* Translate2(char* input)
+{
+    vector<char> first;
+    vector<char> second;
+    int size;
+    char* out = new char[1001];
+    int R = 0;
+    while (input[R] != '\0')
+    {
+        first.push_back(input[R]);
+        second.push_back(input[R + 1]);
+        R += 2;
+    }
+    size = first.size();
+    int* order = new int[size];
+    int* sorted = new int[size];
+    int* indices = new int[size];
+    for (int j = 0; j < size; j++)
+    {
+        order[j] = (int)first[j] * 999 + (int)second[j];
+        sorted[j] = (int)first[j] * 999 + (int)second[j];
+    }
+    sort(sorted, sorted + size);
+    int h;
+    for (int k = 0; k < size; k++)
+    {
+        h = sorted[k];
+        for (int l = 0; l < size; l++)
+        {
+            if (h == order[l])
+            {
+                indices[k] = l;
+            }
+        }
+    }
+    int IP = 0;
+    for (int m = 0; m < size; m++)
+    {
+        out[IP] = first[indices[m]];
+        out[IP + 1] = second[indices[m]];
+        IP += 2;
+    }
+    return out;
+}

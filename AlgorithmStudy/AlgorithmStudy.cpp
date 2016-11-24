@@ -5,17 +5,22 @@
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-    unsigned int a;
-    unsigned int b;
-    unsigned int c;
-
-    scanf("%u", &a);
+    int a;
+    scanf("%d", &a);
 
     for (int i = 0; i < a; i++)
     {
-        scanf("%u", &b);
-        c = Translate(b);
-        printf("%u\n", c);
+        char* in = new char[1001];
+        scanf("%s", in);
+        char* out;
+        out = Translate2(in);
+        int j = 0;
+        while (in[j] != '\0')
+        {
+            printf("%c", out[j]);
+            j++;
+        }
+        printf("\n");
     }
     return 0;
 }
