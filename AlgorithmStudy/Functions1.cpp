@@ -170,3 +170,47 @@ char* Translate2(char* input)
     }
     return out;
 }
+
+vector<char> Translate3(char* input)
+{
+    vector<char> odd;
+    vector<char> even;
+    vector<char> out;
+    int j = 0;
+    while (input[j] != '\0')
+    {
+        odd.push_back(input[j]);
+        if (input[j + 1] != '\0')
+        {
+            even.push_back(input[j + 1]);
+        }
+        j += 2;
+    }
+    int sizeodd = odd.size();
+    int sizeeven = even.size();
+    for (int j = 0; j < sizeodd; j++)
+    {
+        out.push_back(odd[j]);
+    }
+    for (int k = 0; k < sizeeven; k++)
+    {
+        out.push_back(even[k]);
+    }
+    
+    return out;
+}
+
+vector<char> extract(char* input, int target)
+{
+    vector<char> out;
+    int i = 0;
+    while (input[i] != '\0')
+    {
+        if (i != target - 1)
+        {
+            out.push_back(input[i]);
+        }
+        i++;
+    }
+    return out;
+}

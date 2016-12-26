@@ -2,6 +2,8 @@
 #pragma once
 
 using namespace std;
+#include <iostream>
+#include <string>
 #include <vector>
 
 #include "targetver.h"
@@ -13,3 +15,4 @@ using namespace std;
 
 #include "Functions1.h"
 #include "math.h"
+#include "Hash.h"
