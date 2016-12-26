@@ -5,38 +5,20 @@
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-    CHash HashObject;
-    string name = "";
+    CListStudy List;
 
-    HashObject.AddItem("Paul", "Locha");
-    HashObject.AddItem("Kim", "Iced Mocha");
-    HashObject.AddItem("Emma", "Strawberry Smoothy");
-    HashObject.AddItem("Annie", "Hot Chocolate");
-    HashObject.AddItem("Sarah", "Passion Tea");
-    HashObject.AddItem("Pepper", "Caramel Mocha");
-    HashObject.AddItem("Mike", "Chai Tea");
-    HashObject.AddItem("Steve", "Apple Cider");
-    HashObject.AddItem("Bill", "Root Beer");
-    HashObject.AddItem("Marie", "Skinny Latte");
-    HashObject.AddItem("Susan", "Water");
-    HashObject.AddItem("Joe", "Green Tea");
+    List.AddNode(3);
+    List.AddNode(5);
+    List.AddNode(7);
+    List.AddNode(9);
+    List.AddNode(11);
+    List.AddNode(13);
+    List.AddNode(15);
 
-    HashObject.PrintItemsInIndex(2);
+    List.PrintForward();
 
-    while (name != "exit")
-    {
-        cout << "Remove ";
-        cin >> name;
-        if (name != "exit")
-        {
-            HashObject.RemoveItem(name);
-        }
-    }
+    List.DeleteNode(11);
 
-    HashObject.PrintItemsInIndex(2);
-
-    //HashObject.PrintItemsInIndex(8);
-
-    return 0;
+    List.PrintBackward();
 }
 

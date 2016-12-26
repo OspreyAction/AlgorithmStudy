@@ -5,6 +5,7 @@ using namespace std;
 #include <iostream>
 #include <string>
 #include <vector>
+#include <cstdlib>
 
 #include "targetver.h"
 
@@ -16,3 +17,4 @@ using namespace std;
 #include "Functions1.h"
 #include "math.h"
 #include "Hash.h"
+#include "ListStudy.h"
