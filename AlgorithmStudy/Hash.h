@@ -16,7 +16,7 @@ public:
 
 
 private:
-    static const int nTableSize = 4;
+    static const int nTableSize = 10;
 
     struct item
     {

@@ -196,7 +196,6 @@ vector<char> Translate3(char* input)
     {
         out.push_back(even[k]);
     }
-    
     return out;
 }
 
