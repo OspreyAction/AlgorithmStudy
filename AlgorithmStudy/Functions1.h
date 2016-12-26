@@ -11,3 +11,6 @@ unsigned int Translate(unsigned int);
 int SquareXorY(int*);
 
 char* Translate2(char*);
+
+vector<char> Translate3(char*);
+vector<char> extract(char* input, int target);
