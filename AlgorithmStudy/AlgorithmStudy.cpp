@@ -5,38 +5,23 @@
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-    CHash HashObject;
-    string name = "";
+    int a;
+    scanf("%d", &a);
 
-    HashObject.AddItem("Paul", "Locha");
-    HashObject.AddItem("Kim", "Iced Mocha");
-    HashObject.AddItem("Emma", "Strawberry Smoothy");
-    HashObject.AddItem("Annie", "Hot Chocolate");
-    HashObject.AddItem("Sarah", "Passion Tea");
-    HashObject.AddItem("Pepper", "Caramel Mocha");
-    HashObject.AddItem("Mike", "Chai Tea");
-    HashObject.AddItem("Steve", "Apple Cider");
-    HashObject.AddItem("Bill", "Root Beer");
-    HashObject.AddItem("Marie", "Skinny Latte");
-    HashObject.AddItem("Susan", "Water");
-    HashObject.AddItem("Joe", "Green Tea");
-
-    HashObject.PrintItemsInIndex(2);
-
-    while (name != "exit")
+    for (int i = 0; i < a; i++)
     {
-        cout << "Remove ";
-        cin >> name;
-        if (name != "exit")
+        char* in = new char[1001];
+        scanf("%s", in);
+        char* out;
+        out = Translate2(in);
+        int j = 0;
+        while (in[j] != '\0')
         {
-            HashObject.RemoveItem(name);
+            printf("%c", out[j]);
+            j++;
         }
+        printf("\n");
     }
-
-    HashObject.PrintItemsInIndex(2);
-
-    //HashObject.PrintItemsInIndex(8);
-
     return 0;
 }
 
