@@ -22,6 +22,7 @@ public:
     void AddNodeAtTail(nodePtr ptr);
     void DeleteNode(nodePtr ptr);
     void RecoverNode(nodePtr ptr);
+    void PrintElements();
 
 };
 

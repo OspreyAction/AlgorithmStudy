@@ -7,7 +7,8 @@ public:
     CListStudy();
     ~CListStudy();
 
-private:
+//private:
+public:
     nodePtr head;
     nodePtr tail;
     nodePtr curr;
@@ -16,8 +17,8 @@ private:
     int elements;
 
 public:
-    void AddNode(int addData);
-    void DeleteNode(int delData);
+    void AddNode(nodePtr ptr);
+    void DeleteNode(nodePtr ptr);
     void PrintList();
     void PrintForward();
     void PrintBackward();

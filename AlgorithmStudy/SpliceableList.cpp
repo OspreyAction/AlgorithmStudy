@@ -104,3 +104,8 @@ void CSpliceableList::RecoverNode(nodePtr ptr)
     elements++;
 }
 
+void CSpliceableList::PrintElements()
+{
+    cout << elements << " nodes belong to your list\n";
+}
+

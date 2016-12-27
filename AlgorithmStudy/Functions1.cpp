@@ -269,6 +269,5 @@ void MyJosephus(int n, int k)
         List.DeleteNode(List.temp);
     }
 
-    List.tail->next = NULL;
     List.PrintForward();
 }

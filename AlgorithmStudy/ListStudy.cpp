@@ -17,13 +17,8 @@ CListStudy::~CListStudy()
 {
 }
 
-void CListStudy::AddNode(int addData)
+void CListStudy::AddNode(nodePtr ptr)
 {
-    nodePtr n = new node;
-    n->next = NULL;
-    n->prev = NULL;
-    n->data = addData;
-
     if (head != NULL)
     {
         curr = head;
@@ -31,31 +26,31 @@ void CListStudy::AddNode(int addData)
         {
             curr = curr->next;
         }
-        curr->next = n;
-        n->prev = curr;
+        curr->next = ptr;
+        ptr->prev = curr;
     }
     else
     {
-        head = n;
+        head = ptr;
     }
-    tail = n;
+    tail = ptr;
     elements++;
 }
 
-void CListStudy::DeleteNode(int delData)
+void CListStudy::DeleteNode(nodePtr ptr)
 {
     nodePtr delptr = NULL;
     temp = head;
     curr = head;
 
-    while (curr != NULL && curr->data != delData)
+    while (curr != NULL && curr->data != ptr->data)
     {
         temp = curr;
         curr = curr->next;
     }
     if (curr == NULL)
     {
-        cout << delData << " was not in the list\n";
+        cout << ptr->data << " was not in the list\n";
         delete delptr;
         return;
     }
@@ -81,7 +76,7 @@ void CListStudy::DeleteNode(int delData)
             curr->prev = temp;
         }
         delete delptr;
-        cout << "The Value " << delData << " was deleted\n";
+        cout << "The Value " << ptr->data << " was deleted\n";
     }
     elements--;
 }
