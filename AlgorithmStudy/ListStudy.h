@@ -1,3 +1,5 @@
+#include "Node.h"
+
 #pragma once
 class CListStudy
 {
@@ -6,14 +8,6 @@ public:
     ~CListStudy();
 
 private:
-
-    typedef struct node
-    {
-        int data;
-        node* next;
-        node* prev;
-    }* nodePtr;
-
     nodePtr head;
     nodePtr tail;
     nodePtr curr;

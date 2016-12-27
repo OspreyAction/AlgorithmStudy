@@ -213,3 +213,62 @@ vector<char> extract(char* input, int target)
     }
     return out;
 }
+
+
+void josephus(int n, int k)
+{
+    list<int> s;
+    for (int i = 1; i <= n; i++)
+    {
+        s.push_back(i);
+    }
+    list<int>::iterator kill = s.begin();
+    while (s.size() >= 3)
+    {
+        kill = s.erase(kill);
+        if (kill == s.end()) kill = s.begin();
+        --n;
+        for (int j = 0; j< k - 1; j++)
+        {
+            ++kill;
+            if (kill == s.end()) kill = s.begin();
+        }
+    }
+    cout << s.front() << " " << s.back() << endl;
+}
+
+void MyJosephus(int n, int k)
+{
+    CSpliceableList List;
+    vector<nodePtr> survivors;
+
+    for (int i = 1; i <= n; i++)
+    {
+        survivors.push_back(CreateNode(i));
+        List.AddNodeAtTail(survivors[i - 1]);
+    }
+
+    List.DeleteNode(survivors[0]);
+    List.curr = List.head;
+
+    while (List.elements > 2)
+    {
+        for (int j = 1; j <= k; j++)
+        {
+            if (List.curr->next == NULL)
+            {
+                List.temp = List.curr;
+                List.curr = List.head;
+            }
+            else
+            {
+                List.temp = List.curr;
+                List.curr = List.curr->next;
+            }
+        }
+        List.DeleteNode(List.temp);
+    }
+
+    List.tail->next = NULL;
+    List.PrintForward();
+}

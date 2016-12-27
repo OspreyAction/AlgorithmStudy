@@ -6,6 +6,7 @@ using namespace std;
 #include <string>
 #include <vector>
 #include <cstdlib>
+#include <list>
 
 #include "targetver.h"
 
@@ -18,3 +19,5 @@ using namespace std;
 #include "math.h"
 #include "Hash.h"
 #include "ListStudy.h"
+#include "SpliceableList.h"
+#include "Node.h"

@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "ListStudy.h"
+#include "Node.h"
 
-using namespace std;
 
 CListStudy::CListStudy()
 {

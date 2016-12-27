@@ -14,3 +14,6 @@ char* Translate2(char*);
 
 vector<char> Translate3(char*);
 vector<char> extract(char*, int);
+
+void josephus(int, int);
+void MyJosephus(int, int);
