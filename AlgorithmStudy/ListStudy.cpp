@@ -59,14 +59,23 @@ void CListStudy::DeleteNode(int delData)
     else
     {
         delptr = curr;
-        curr = curr->next;
-        temp->next = curr;
-        curr->prev = temp;
         if (delptr == head)
         {
             head = head->next;
             head->prev = NULL;
             temp = NULL;
+        }
+        else if (delptr == tail)
+        {
+            tail = tail->prev;
+            tail->next = NULL;
+            temp = NULL;
+        }
+        else
+        {
+            curr = curr->next;
+            temp->next = curr;
+            curr->prev = temp;
         }
         delete delptr;
         cout << "The Value " << delData << " was deleted\n";
