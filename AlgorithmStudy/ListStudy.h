@@ -19,12 +19,14 @@ private:
     nodePtr curr;
     nodePtr temp;
 
+    int elements;
+
 public:
     void AddNode(int addData);
     void DeleteNode(int delData);
     void PrintList();
     void PrintForward();
     void PrintBackward();
-
+    void PrintElements();
 };
 

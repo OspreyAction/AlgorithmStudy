@@ -16,9 +16,8 @@ int _tmain(int argc, _TCHAR* argv[])
     List.AddNode(15);
 
     List.PrintForward();
-
-    List.DeleteNode(11);
-
+    List.DeleteNode(3);
     List.PrintBackward();
+    List.PrintElements();
 }
 

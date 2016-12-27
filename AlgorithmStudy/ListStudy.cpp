@@ -9,8 +9,9 @@ CListStudy::CListStudy()
     tail = NULL;
     curr = NULL;
     temp = NULL;
-}
 
+    elements = 0;
+}
 
 CListStudy::~CListStudy()
 {
@@ -38,6 +39,7 @@ void CListStudy::AddNode(int addData)
         head = n;
     }
     tail = n;
+    elements++;
 }
 
 void CListStudy::DeleteNode(int delData)
@@ -55,6 +57,7 @@ void CListStudy::DeleteNode(int delData)
     {
         cout << delData << " was not in the list\n";
         delete delptr;
+        return;
     }
     else
     {
@@ -80,6 +83,7 @@ void CListStudy::DeleteNode(int delData)
         delete delptr;
         cout << "The Value " << delData << " was deleted\n";
     }
+    elements--;
 }
 
 void CListStudy::PrintList()
@@ -114,4 +118,9 @@ void CListStudy::PrintBackward()
         curr = curr->prev;
     }
     cout << "\n";
+}
+
+void CListStudy::PrintElements()
+{
+    cout << elements << " nodes belong to your list\n";
 }
