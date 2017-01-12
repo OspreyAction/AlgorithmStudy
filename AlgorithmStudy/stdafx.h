@@ -7,6 +7,8 @@ using namespace std;
 #include <vector>
 #include <cstdlib>
 #include <list>
+#include <stack>
+#include <sstream>
 
 #include "targetver.h"
 
@@ -21,3 +23,4 @@ using namespace std;
 #include "ListStudy.h"
 #include "SpliceableList.h"
 #include "Node.h"
+#include "RPN.h"

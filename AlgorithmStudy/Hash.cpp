@@ -105,9 +105,9 @@ int CHash::Hash(string key)
     int hash = 0;
     int index = 0;
 
-    for (int i = 0; i < key.length(); i++)
+    for (unsigned int i = 0; i < key.length(); i++)
     {
-        hash = (hash + (int)key[i]) * 17;
+        hash = (hash + (unsigned int)key[i]) * 17;
     }
 
     index = hash % nTableSize;

@@ -215,7 +215,7 @@ vector<char> extract(char* input, int target)
 }
 
 
-void josephus(int n, int k)
+void Josephus(int n, int k)
 {
     list<int> s;
     for (int i = 1; i <= n; i++)

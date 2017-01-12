@@ -5,31 +5,23 @@
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-    
-    MyJosephus(40, 3);
-    
-    /*
-    CSpliceableList List;
 
-    nodePtr node1 = CreateNode(1);
-    nodePtr node2 = CreateNode(2);
-    nodePtr node3 = CreateNode(3);
-    nodePtr node4 = CreateNode(4);
-    nodePtr node5 = CreateNode(5);
-    nodePtr node6 = CreateNode(6);
+    stack<int> myStack;
 
-    List.AddNodeAtTail(node1);
-    List.AddNodeAtTail(node2);
-    List.AddNodeAtTail(node3);
-    List.AddNodeAtTail(node4);
-    List.AddNodeAtTail(node5);
-    List.AddNodeAtTail(node6);
+    myStack.push(5);
+    myStack.push(3);
+    myStack.push(2);
 
-    List.PrintForward();
-    List.DeleteNode(node6);
-    List.PrintForward();
-    List.RecoverNode(node6);
-    List.PrintForward();
-    */
+    cout << "Number of ints on the stack : " << myStack.size() << endl;
+
+    while (!myStack.empty())
+    {
+        cout << "popping " << myStack.top() << endl;
+        myStack.pop();
+    }
+
+    CRPN rpn;
+
+    //MyJosephus(40, 3);
+
 }
-
